@@ -16,7 +16,7 @@ submit_form <- function(inputId, label, icon = NULL, width = NULL, ..., formId) 
                       ",if (missing(formId)) { 
                         "var form = $('#' + event.name).closest('form').parsley();" 
                         } else {
-                          paste0("var form = '",formId,"';")
+                          paste0("var form = $('#",formId,"').parsley();")
                         }, "
                      if (!form.validate()) {
                      event.preventDefault();
