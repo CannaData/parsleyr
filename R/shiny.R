@@ -2,7 +2,8 @@
 #' @export
 #' @import shiny
 #' @inheritParams shiny::actionButton
-submit_form <- function(inputId, label, icon = NULL, width = NULL, ...) {
+#' @param formId ID of form to validate
+submit_form <- function(inputId, label, icon = NULL, width = NULL, ..., formId) {
   x <- match.call()
   x[[1]] <- quote(shiny::actionButton)
   shiny::tagList(eval(x),
@@ -12,7 +13,11 @@ submit_form <- function(inputId, label, icon = NULL, width = NULL, ...) {
                      if (event.name === '",
                      inputId,
                      "' && event.inputType === 'shiny.action') {
-                      var form = $('#' + event.name).closest('form').parsley();
+                      ",if (missing(formId)) { 
+                        "var form = $('#' + event.name).closest('form').parsley();" 
+                        } else {
+                          paste0("var form = '",formId,"';")
+                        }, "
                      if (!form.validate()) {
                      event.preventDefault();
                      }

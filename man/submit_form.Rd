@@ -4,7 +4,7 @@
 \alias{submit_form}
 \title{Submit button for validation}
 \usage{
-submit_form(inputId, label, icon = NULL, width = NULL, ...)
+submit_form(inputId, label, icon = NULL, width = NULL, ..., formId)
 }
 \arguments{
 \item{inputId}{The \code{input} slot that will be used to access the value.}
@@ -18,6 +18,8 @@ you could also use any other HTML, like an image.}
 see \code{\link{validateCssUnit}}.}
 
 \item{...}{Named attributes to be applied to the button or link.}
+
+\item{formId}{ID of form to validate}
 }
 \description{
 Submit button for validation
