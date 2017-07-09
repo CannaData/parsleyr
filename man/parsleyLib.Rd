@@ -5,7 +5,7 @@
 \alias{parsleyrCSS}
 \title{Include parsley.js}
 \usage{
-parsleyLib(cdn = TRUE, css = FALSE)
+parsleyLib(cdn = TRUE)
 
 parsleyrCSS()
 }

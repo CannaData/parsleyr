@@ -5,7 +5,7 @@
 #' @export
 #' 
 
-parsleyLib <- function(cdn = TRUE, css = FALSE) {
+parsleyLib <- function(cdn = TRUE) {
   htmltools::htmlDependency(
     "parsley.js", "2.7.2", 
     src = if (cdn) {
