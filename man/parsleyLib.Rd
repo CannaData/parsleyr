@@ -2,9 +2,12 @@
 % Please edit documentation in R/lib.R
 \name{parsleyLib}
 \alias{parsleyLib}
+\alias{parsleyrCSS}
 \title{Include parsley.js}
 \usage{
-parsleyLib(cdn = TRUE)
+parsleyLib(cdn = TRUE, css = FALSE)
+
+parsleyrCSS()
 }
 \arguments{
 \item{cdn}{Boolean indicating whether to pull dependency from CDN}
