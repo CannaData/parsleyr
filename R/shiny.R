@@ -12,7 +12,7 @@ submit_form <- function(inputId, label, icon = NULL, width = NULL, ..., formId) 
                      "$(document).on('shiny:inputchanged', function(event) {
                      if (event.name === '",
                      inputId,
-                     "' && event.inputType === 'shiny.action') {
+                     "' && event.inputType === 'shiny.action' && event.value > 0) {
                       ",if (missing(formId)) { 
                         "var form = $('#' + event.name).closest('form').parsley();" 
                         } else {
