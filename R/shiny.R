@@ -6,7 +6,7 @@
 submit_form <- function(inputId, label, icon = NULL, width = NULL, ..., formId) {
   x <- match.call()
   x[[1]] <- quote(shiny::actionButton)
-  shiny::tagList(eval(x),
+  shiny::tagList(eval.parent(x),
                  shiny::tags$script(shiny::HTML(
                    paste0(
                      "$(document).on('shiny:inputchanged', function(event) {
