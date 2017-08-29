@@ -9,7 +9,7 @@ parsleyLib <- function(cdn = TRUE) {
   htmltools::htmlDependency(
     "parsley.js", "2.7.2", 
     src = if (cdn) {
-      c(href = "http://parsleyjs.org/dist/")
+      c(href = "https://cdnjs.cloudflare.com/ajax/libs/parsley.js/2.7.2/")
     } else {
       c(file = system.file(package = "parsleyr", "javascript", "parsley.js"))
     },
